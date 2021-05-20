@@ -7,23 +7,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-image: linear-gradient( #2d882d, #2e4272);
 }
 .contanier{
     box-shadow: 0 1px rgba(0, 0, 0, 0.5);
     padding: 15px;
     border-radius: 5px;
-    background-color: red;
+    background-color: #aa6c39;
 }
 .screen {
     margin: 0;
     background-color: #cfcfcf;
-    color: blue;
+    color: #061539;
     font-size: 64px;
     border-radius: 5px;
     padding: 10px;
     cursor: default;
     user-select: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 .screen span {
     display: inline-block;
@@ -45,13 +46,13 @@ body{
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    color: blue;
-    background-color: yellow;
+    color: #061539;
+    background-color: #88cc88;
     outline: none;
     cursor: pointer;
 }
 .buttons button:hover{
-    color: yellow;
-    background-color: blue;
+    color: #88cc88;
+    background-color: #061539;
 
 }
