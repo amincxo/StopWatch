@@ -13,6 +13,21 @@ class state {
 class Stopwatch {
     constructor(state){
         this.state = state;
+        this.requestAnimationId = null
+        this.handleClickStart = this.handleClickStart.bind(this);
+        document
+            .getElementById("start")
+            .addEventListener("click" , this.handleClickStart);
+        this.handleClickStart = this.handleClickStart.bind(this);
+        document
+            .getElementById("start")
+            .addEventListener("click" , this.handleClickStart);
+        this.handleClickStart = this.handleClickStart.bind(this);
+        document
+            .getElementById("start")
+            .addEventListener("click" , this.handleClickStart);
+        this.tick = this.tick.bind(this);
+        this.render();
     }
 
     static ready() {
@@ -58,6 +73,31 @@ class Stopwatch {
 
   render(){
       const {difference} = this.state;
-      const hundredths = (difference ? Math.floor(difference.getMilliseconds() / 10) : )
+      const hundredths = (difference
+            ? Math.floor(difference.getMilliseconds() / 10)
+        : 0
+      )
+        .toString()
+        .padstsart(2,"0");
+        const seconds = (difference 
+            ? Math.floor(difference.getseconds())
+        : 0
+      )
+        .toString()
+        .padstsart(2,"0");
+        const minutes = (difference 
+            ? Math.floor(difference.getMinutes())
+        : 0
+      )
+        .toString()
+        .padstsart(2,"0");
+        //render screen
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+        document.getElementById("hundredths").textContent = hundredths;
+
+        
   }
 }
+
+const STOPWATCH = Stopwatch.ready();
